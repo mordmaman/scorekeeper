@@ -7,6 +7,7 @@ var s2 = document.querySelector(".score2");
 limitSpan.innerHTML = limit;
 s1.innerHTML = score1;
 s2.innerHTML = score2;
+//var numInput = document.querySelector("input");
 var winner = false;
 
 function p1(){
@@ -31,36 +32,9 @@ function p2(){
   s2.innerHTML = score2;
 }
 
-// function p1(){
-//   if(score2!=limit){
-//     if (score1 == limit-1){
-//       s1.innerHTML = score1+=1;
-//       s1.style.color="green";
-      
-//     }
-//     else if (score1<limit){
-//       score1++;
-//       s1.innerHTML++;
-//       console.log(limit);
-//     }
-//   }
-// }
-
-
-// function p2(){
-//   if(score1 != limit){
-//     if (score2 == limit-1 && score1 !=limit){
-//       s2.innerHTML = score2+=1;
-//       s2.style.color="green";
-//     }
-//     else if (score2<limit && score1 != limit){
-//       s2.innerHTML = score2+=1;
-//     } 
-//   }
-// }
-
-
-
+function entry(){
+  alert("change");
+}
 
 function reset(){
   score1 = 0;
@@ -72,6 +46,8 @@ function reset(){
   s1.style.color="black";
   s2.style.color="black";
 }
+
+
 
 
 
