@@ -18,7 +18,7 @@ function p1(){
 			winner = true;
 		}
   }
-  s1.innerHTML = score1;
+  s1.textContent = score1;
 }
 
 function p2(){
@@ -33,18 +33,23 @@ function p2(){
 }
 
 function entry(){
-  alert("change");
+  limitSpan.innerHTML = document.querySelector("input").value;
+  limit = Number(document.querySelector("input").value);
+  
+  reset();
+  console.log(limit);
 }
 
 function reset(){
   score1 = 0;
   score2 = 0;
-  limit = 5;
-  limitSpan.innerHTML = limit;
-  s1.innerHTML = score1;
-  s2.innerHTML = score2;
-  s1.style.color="black";
-  s2.style.color="black";
+  //limit = 5;
+  //limitSpan.innerHTML = limit;
+  s1.innerHTML = 0;
+  s2.innerHTML = 0;
+  s1.classList.remove("green")
+  s2.classList.remove("green");
+  winner = false;
 }
 
 
