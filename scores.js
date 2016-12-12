@@ -7,33 +7,57 @@ var s2 = document.querySelector(".score2");
 limitSpan.innerHTML = limit;
 s1.innerHTML = score1;
 s2.innerHTML = score2;
+var winner = false;
 
 function p1(){
-  if(score2!=limit){
-    if (score1 == limit-1){
-      s1.innerHTML = score1+=1;
-      s1.style.color="green";
-      
-    }
-    else if (score1<limit){
-      s1.innerHTML = score1+=1;
-      console.log(limit);
-    }
+  if(!winner){
+    score1++;
+    if(score1 === limit){
+			s1.classList.add("green");
+			winner = true;
+		}
   }
+  s1.innerHTML = score1;
 }
-
 
 function p2(){
-  if(score1 != limit){
-    if (score2 == limit-1 && score1 !=limit){
-      s2.innerHTML = score2+=1;
-      s2.style.color="green";
-    }
-    else if (score2<limit && score1 != limit){
-      s2.innerHTML = score2+=1;
-    } 
+  if(!winner){
+    score2++;
+    if(score2 === limit){
+			s2.classList.add("green");
+			winner = true;
+		}
   }
+  s2.innerHTML = score2;
 }
+
+// function p1(){
+//   if(score2!=limit){
+//     if (score1 == limit-1){
+//       s1.innerHTML = score1+=1;
+//       s1.style.color="green";
+      
+//     }
+//     else if (score1<limit){
+//       score1++;
+//       s1.innerHTML++;
+//       console.log(limit);
+//     }
+//   }
+// }
+
+
+// function p2(){
+//   if(score1 != limit){
+//     if (score2 == limit-1 && score1 !=limit){
+//       s2.innerHTML = score2+=1;
+//       s2.style.color="green";
+//     }
+//     else if (score2<limit && score1 != limit){
+//       s2.innerHTML = score2+=1;
+//     } 
+//   }
+// }
 
 
 

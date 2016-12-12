@@ -6,3 +6,7 @@
 .scores, .playingTo, .buttons{
   display: flex;
 }
+
+.green{
+  color: limegreen;
+}
