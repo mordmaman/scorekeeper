@@ -22,6 +22,7 @@ function p1(){
   }
 }
 
+
 function p2(){
   if(score1 != limit){
     if (score2 == limit-1 && score1 !=limit){
@@ -47,3 +48,6 @@ function reset(){
   s1.style.color="black";
   s2.style.color="black";
 }
+
+
+
